@@ -130,6 +130,13 @@ const GameUI: Component<{}, {
           }}>X</div>
         </div>
       </div>
+      {/* TODO: UI */}
+      <button on:click={() => {
+        this.game.startBGM();
+      }}>Start BGM</button>
+      <button on:click={() => {
+        this.game.stopBGM();
+      }}>Stop BGM</button>
     </div>
   )
 }

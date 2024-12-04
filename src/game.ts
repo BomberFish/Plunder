@@ -1,9 +1,11 @@
-import { settingsStore, progressStore } from "./store";
+import { progressStore } from "./store";
 
 export class Game {
   clicks: number;
   clicksToReach: number;
   digAudios: any[];
+  bgm: any[];
+  activeBGM: any;
 
   constructor() {
     this.clicks = 0;
@@ -14,6 +16,11 @@ export class Game {
       new Audio("/assets/audio/sfx/dig3.ogg"),
       new Audio("/assets/audio/sfx/dig4.ogg"),
     ];
+    this.bgm = [
+      new Audio("/assets/audio/bgm/runescape1.ogg"),
+      new Audio("/assets/audio/bgm/runescape2.ogg"),
+      new Audio("/assets/audio/bgm/5drunk_raccoon_audio.ogg"),
+    ];
   }
 
   updateCount() {
@@ -22,6 +29,21 @@ export class Game {
       progressStore.count++;
     }
     this.digAudios[Math.floor(Math.random() * this.digAudios.length)].play();
+  }
+
+  startBGM() {
+    this.activeBGM = this.bgm[Math.floor(Math.random() * this.bgm.length)];
+    this.activeBGM.addEventListener("ended", () => {
+      this.startBGM();
+    })
+    this.activeBGM.play();
+  }
+
+  stopBGM() {
+    for (let i = 0; i < this.bgm.length; i++) {
+      this.bgm[i].pause();
+      this.bgm[i].currentTime = 0;
+    }
   }
 
   resetDig() {
