@@ -61,6 +61,10 @@ small {
     color: var(--fg2);
 }
 
+:disabled {
+    cursor: not-allowed;
+}
+
 a,
 a:visited {
     color: var(--accent0);
@@ -116,6 +120,17 @@ button {
         &:hover {
             scale: 0.95;
             box-shadow: 0 0 0.9rem 0.015rem color-mix(in srgb, var(--destructive), transparent 20%);
+        }
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        background: var(--bg4);
+        color: var(--fg3);
+
+        &:hover {
+            filter: brightness(1);
+            scale: 1;
         }
     }
 }

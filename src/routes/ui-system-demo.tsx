@@ -30,6 +30,8 @@ const UIDemo: Component<{}, {}> = function () {
       <br></br>
       <p>While destructive buttons shrink in fear.</p>
       <button class="destructive">Abandon ship!</button>
+      <p>Disabled buttons are but mere ghosts.</p>
+      <button disabled>Not enough doubloons...</button>
       <h2>Inputs</h2>
       <input type="text" placeholder="Type here, matey!" />
       <h2>Colors</h2>
