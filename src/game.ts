@@ -6,6 +6,8 @@ export class Game {
   digAudios: any[];
   bgm: any[];
   activeBGM: any;
+  bgmIndex: number;
+  bgmPlaying: boolean;
 
   constructor() {
     this.clicks = 0;
@@ -21,6 +23,8 @@ export class Game {
       new Audio("/assets/audio/bgm/runescape2.ogg"),
       new Audio("/assets/audio/bgm/5drunk_raccoon_audio.ogg"),
     ];
+    this.bgmIndex = 0;
+    this.bgmPlaying = false;
   }
 
   updateCount() {
@@ -32,11 +36,21 @@ export class Game {
   }
 
   startBGM() {
-    this.activeBGM = this.bgm[Math.floor(Math.random() * this.bgm.length)];
+    if (this.bgmPlaying) this.stopBGM();
+    let index = this.bgmIndex;
+    do {
+      this.bgmIndex = Math.floor(Math.random() * this.bgm.length);
+    } while (this.bgmIndex == index);
+    this.activeBGM = this.bgm[this.bgmIndex];
     this.activeBGM.addEventListener("ended", () => {
       this.startBGM();
-    })
-    this.activeBGM.play();
+    });
+    try {
+      this.activeBGM.play();
+      this.bgmPlaying = true;
+    } catch (e) {
+      throw e; // hot potato!
+    }
   }
 
   stopBGM() {
