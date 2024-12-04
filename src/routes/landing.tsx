@@ -45,7 +45,7 @@ const Landing: Component<{}, {}> = function () {
           }} class="primary">Play</button>
           <br></br>
           <br></br>
-          <small>Built with <a href="https://dreamland.js.org" target="_blank">dreamland.js</a> by <a href="https://bomberfish.ca" target="_blank">BomberFish</a></small>
+          <small>Built with <a href="https://dreamland.js.org" target="_blank">dreamland.js</a> in 🇨🇦 by <a href="https://bomberfish.ca" target="_blank">BomberFish</a></small>
           <br></br>
           <small>Made for Hack Club's <a href="https://highseas.hackclub.com" target="_blank">High Seas</a> 2024</small>
         </div>
