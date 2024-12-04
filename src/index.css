@@ -26,10 +26,10 @@
     --destructive: #ff3d00;
     --success: #00ff3d;
 
-    --font-display: 'Eagle Lake', cursive;
-    --font-display-alt: 'Pirata One', cursive;
-    --font-blackletter: 'UnifrakturCook', cursive;
-    --font-text: 'Texturina', sans-serif;
+    --font-display: 'Eagle Lake', fantasy, cursive, system-ui, sans-serif;
+    --font-display-alt: 'Pirata One', cursive, system-ui, sans-serif;
+    --font-blackletter: 'UnifrakturCook', cursive, system-ui, sans-serif;
+    --font-text: 'Texturina', serif, system-ui, sans-serif;
 }
 
 body {

@@ -36,18 +36,18 @@ const UIDemo: Component<{}, {}> = function () {
       <input type="text" placeholder="Type here, matey!" />
       <h2>Colors</h2>
       <h3>Backgrounds</h3>
-      <div class="flex row gap-sm">
+      <div class="flex row gap-md">
       {["--bg0", "--bg1", "--bg2", "--bg3", "--bg4", "--bg5"].map((color) => (
-        <div class="flex row gap-sm">
+        <div class="flex row gap-sm justify-center">
           <ColorWell color={`var(${color})`} />
           <span>{color}</span>
         </div>
       ))}
       </div>
       <h3>Foregrounds</h3>
-      <div class="flex row gap-sm">
+      <div class="flex row gap-md">
       {["--fg0", "--fg1", "--fg2", "--fg3", "--fg4", "--fg5"].map((color) => (
-        <div class="flex row gap-sm">
+        <div class="flex row gap-sm justify-center">
           <ColorWell color={`var(${color})`} />
           <span>{color}</span>
         </div>
@@ -55,9 +55,9 @@ const UIDemo: Component<{}, {}> = function () {
       </div>
       <br></br>
       <h3>Accents</h3>
-      <div class="flex row gap-sm">
+      <div class="flex row gap-md">
       {["--accent0", "--accent1", "--destructive", "--success"].map((color) => (
-        <div class="flex row gap-sm">
+        <div class="flex row gap-sm justify-center">
           <ColorWell color={`var(${color})`} />
           <span>{color}</span>
         </div>
