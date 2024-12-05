@@ -42,9 +42,9 @@ export class Game {
       this.bgmIndex = Math.floor(Math.random() * this.bgm.length);
     } while (this.bgmIndex == index);
     this.activeBGM = this.bgm[this.bgmIndex];
-    this.activeBGM.addEventListener("ended", () => {
+    this.activeBGM.onended = () => {
       this.startBGM();
-    });
+    };
     try {
       this.activeBGM.play();
       this.bgmPlaying = true;
