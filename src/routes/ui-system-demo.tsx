@@ -1,4 +1,4 @@
-const ColorWell: Component<{ color: string }, {}> = function (props) {
+const ColorWell: Component<{ color: string }, {}> = function () {
   this.css = `
     display: inline-block;
     width: 2em;
