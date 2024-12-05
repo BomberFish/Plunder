@@ -58,6 +58,7 @@ export class Game {
       this.bgm[i].pause();
       this.bgm[i].currentTime = 0;
     }
+    this.bgmPlaying = false;
   }
 
   resetDig() {
