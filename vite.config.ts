@@ -3,5 +3,5 @@ import { dreamlandPlugin } from 'vite-plugin-dreamland';
 
 export default defineConfig({
     plugins: [dreamlandPlugin()],
-    base: './'
+    base: '/'
 });
